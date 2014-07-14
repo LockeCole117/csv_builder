@@ -24,8 +24,8 @@ module CsvBuilder # :nodoc:
   #   @output_encoding = 'UTF-8'
 
   if defined?(Rails) and Rails.version < '3'
-    class TemplateHandler < ActionView::Template::Handler
-      include ActionView::Template::Handlers::Compilable
+    class TemplateHandler < ActionView::TemplateHandler
+      include ActionView::TemplateHandlers::Compilable
     end
   end
 
