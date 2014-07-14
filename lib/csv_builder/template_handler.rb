@@ -24,7 +24,7 @@ module CsvBuilder # :nodoc:
     #
     #   @output_encoding = 'UTF-8'
     class TemplateHandler < ActionView::TemplateHandler
-      include ActionView::Template::HandlersCompilable
+      include ActionView::TemplateHandlers::Compilable
 
       def compile(template)
         <<-EOV
